@@ -46,5 +46,6 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 0.001rem solid rgba($color: #201d1d, $alpha: 1);
 }
 </style>
