@@ -6,6 +6,7 @@
     <main v-else class="WrapperSite">
       <NavbarMain />
       <Wrapper />
+      <About />
     </main>
   </div>
 </template>
@@ -13,17 +14,20 @@
 <script>
 import NavbarMain from "./components/Navigations/NavbarMain.vue";
 import Wrapper from "./components/Headers/Wrapper.vue";
+import About from "./components/Abouts/About.vue";
+
 export default {
   name: "App",
   data() {
     return {
-      isLoading: false,
+      isLoading: false
     };
   },
   components: {
     NavbarMain,
     Wrapper,
-  },
+    About,
+  }
 };
 </script>
 
@@ -42,7 +46,7 @@ export default {
 
   --dark: #171717;
   --darker: #201d1d;
-  --gray: #e5e5e5;
+  --gray: #d8d5d5;
   --gold: #eecc67;
   --golded: #f0c442;
   --white: #ffffff;

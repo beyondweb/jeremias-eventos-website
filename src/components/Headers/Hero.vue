@@ -1,8 +1,8 @@
 <template>
   <section class="hero">
     <div class="role">
-      <span>Sempre focado no sucesso do seu Evento.</span>
-      <img src="../../assets/arrow.svg" alt="" />
+      <span>Role para ver nosso trabalho.</span>
+      <img src="../../assets/arrow.svg" alt />
     </div>
     <div class="title-site">
       <h5>Com o Compromisso de estar</h5>
@@ -10,9 +10,15 @@
     </div>
     <div class="social-links">
       <ul>
-        <li><i class="bx bxl-facebook"></i></li>
-        <li><i class="bx bxl-instagram"></i></li>
-        <li><i class="bx bxl-whatsapp"></i></li>
+        <li>
+          <i class="bx bxl-facebook"></i>
+        </li>
+        <li>
+          <i class="bx bxl-instagram"></i>
+        </li>
+        <li>
+          <i class="bx bxl-whatsapp"></i>
+        </li>
       </ul>
     </div>
   </section>
@@ -20,7 +26,7 @@
 
 <script>
 export default {
-  name: "Hero",
+  name: "Hero"
 };
 </script>
 
@@ -33,16 +39,20 @@ export default {
   align-items: center;
 }
 .role {
-  display: grid;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  transform: rotate(90deg);
   > span {
-    margin: 0;
-    /* padding: 0;
-    transform: rotate(90deg); */
     color: var(--white);
     text-transform: uppercase;
     font-weight: 100;
     font-size: 0.75rem;
     letter-spacing: 0.1rem;
+  }
+  > img {
+    padding-top: 100px;
+    transform: rotate(-90deg);
   }
 }
 </style>
