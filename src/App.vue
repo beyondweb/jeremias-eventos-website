@@ -7,6 +7,7 @@
       <NavbarMain />
       <Wrapper />
       <About />
+      <Services />
     </main>
   </div>
 </template>
@@ -15,6 +16,7 @@
 import NavbarMain from "./components/Navigations/NavbarMain.vue";
 import Wrapper from "./components/Headers/Wrapper.vue";
 import About from "./components/Abouts/About.vue";
+import Services from "./components/Services/Service.vue";
 
 export default {
   name: "App",
@@ -27,6 +29,7 @@ export default {
     NavbarMain,
     Wrapper,
     About,
+    Services
   }
 };
 </script>
