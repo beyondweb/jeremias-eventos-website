@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <!-- Se o site estiver carregando ele vai setar o componente IsLoading -->
-    <section v-if="isLoading" class="isLoading">Loading</section>
+    <section class="isLoading-wrapper" v-if="loading">
+      <IsLoading />
+    </section>
     <!-- Quando terminar de carregar vai setar todo o site -->
     <main v-else class="WrapperSite">
       <NavbarMain />
@@ -13,6 +15,7 @@
 </template>
 
 <script>
+import IsLoading from "./components/Global/IsLoading.vue";
 import NavbarMain from "./components/Navigations/NavbarMain.vue";
 import Wrapper from "./components/Headers/Wrapper.vue";
 import About from "./components/Abouts/About.vue";
@@ -22,15 +25,27 @@ export default {
   name: "App",
   data() {
     return {
-      isLoading: false
+      loading: true,
     };
   },
   components: {
+    IsLoading,
     NavbarMain,
     Wrapper,
     About,
-    Services
-  }
+    Services,
+  },
+  methods: {
+    Loading() {
+      window.addEventListener("load", () => {
+        this.loading = !this.loading;
+        console.log(this.loading);
+      });
+    },
+  },
+  created() {
+    this.Loading();
+  },
 };
 </script>
 
@@ -67,5 +82,13 @@ body {
   margin: 0 auto;
   height: auto;
   padding: 0px 16px;
+}
+.isLoading-wrapper {
+  width: 100%;
+  height: 100vh;
+  background: var(--gradient-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
