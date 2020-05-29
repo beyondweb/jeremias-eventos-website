@@ -226,7 +226,7 @@ export default {
 .gallery-item:hover .hover-item {
   transform: scaleY(1);
   transition: transform 0.2s;
-  box-shadow: inset 0 0 0 200px rgba($color: #f0c442, $alpha: 0.3);
+  box-shadow: inset 0 0 0 200px rgba($color: #f0c442, $alpha: 0.6);
 }
 
 .gallery-item .hover-item .description small {

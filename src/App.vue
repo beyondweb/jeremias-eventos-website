@@ -11,6 +11,7 @@
       <About />
       <Services />
       <Gallery />
+      <Team />
     </main>
   </div>
 </template>
@@ -22,6 +23,7 @@ import NavbarMain from "./components/Navigations/NavbarMain.vue";
 import About from "./components/Abouts/About.vue";
 import Services from "./components/Services/Service.vue";
 import Gallery from "./components/Gallerys/Gallery.vue";
+import Team from "./components/Teams/Team.vue";
 
 export default {
   name: "App",
@@ -37,6 +39,7 @@ export default {
     About,
     Services,
     Gallery,
+    Team,
   },
   methods: {
     Loading() {
