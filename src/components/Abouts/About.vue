@@ -6,8 +6,18 @@
           <TitleSection text="Sobre Nós" />
         </div>
         <div class="description">
-          <p>Somos uma empresa especializada na realização de eventos corporativos, planejamento estratégico em eventos e soluções promocionais. Nosso foco é trazer soluções práticas e criativas objetivando sempre a satisfação de nossos clientes.</p>
-          <p>Possuímos um time de profissionais qualificados, empenhados e comprometidos que com visão pró-ativa e inovadora irão transformar seu evento em um momento inesquecível. Oferecemos um portfólio amplo de serviços para que o resultado seja perfeito.</p>
+          <p>
+            Somos uma empresa especializada na realização de eventos
+            corporativos, planejamento estratégico em eventos e soluções
+            promocionais. Nosso foco é trazer soluções práticas e criativas
+            objetivando sempre a satisfação de nossos clientes.
+          </p>
+          <p>
+            Possuímos um time de profissionais qualificados, empenhados e
+            comprometidos que com visão pró-ativa e inovadora irão transformar
+            seu evento em um momento inesquecível. Oferecemos um portfólio amplo
+            de serviços para que o resultado seja perfeito.
+          </p>
         </div>
       </div>
       <div class="content-image">
@@ -22,8 +32,8 @@ import TitleSection from "../Global/TitleSection";
 export default {
   name: "About",
   components: {
-    TitleSection
-  }
+    TitleSection,
+  },
 };
 </script>
 
@@ -53,7 +63,7 @@ export default {
     }
   }
   > .description {
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 1.75rem;
     > p {
       margin-bottom: 1.5rem;

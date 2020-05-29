@@ -7,9 +7,10 @@
     <!-- Quando terminar de carregar vai setar todo o site -->
     <main v-else class="WrapperSite">
       <NavbarMain />
-      <Wrapper />
+      <!-- <Wrapper /> -->
       <About />
       <Services />
+      <Gallery />
     </main>
   </div>
 </template>
@@ -17,9 +18,10 @@
 <script>
 import IsLoading from "./components/Global/IsLoading.vue";
 import NavbarMain from "./components/Navigations/NavbarMain.vue";
-import Wrapper from "./components/Headers/Wrapper.vue";
+// import Wrapper from "./components/Headers/Wrapper.vue";
 import About from "./components/Abouts/About.vue";
 import Services from "./components/Services/Service.vue";
+import Gallery from "./components/Gallerys/Gallery.vue";
 
 export default {
   name: "App",
@@ -31,9 +33,10 @@ export default {
   components: {
     IsLoading,
     NavbarMain,
-    Wrapper,
+    // Wrapper,
     About,
     Services,
+    Gallery,
   },
   methods: {
     Loading() {
@@ -90,5 +93,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+img {
+  max-width: 100%;
+  display: block;
 }
 </style>

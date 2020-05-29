@@ -8,17 +8,17 @@
         <div class="services-lists">
           <ItemService
             :img="Icon1"
-            title="Casamento"
+            title="Casamentos"
             description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti voluptatem reiciendis minus, a dolores."
           />
           <ItemService
             :img="Icon2"
-            title="Aniversário"
+            title="Aniversários"
             description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti voluptatem reiciendis minus, a dolores."
           />
           <ItemService
             :img="Icon3"
-            title="Formatura"
+            title="Formaturas"
             description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti voluptatem reiciendis minus, a dolores."
           />
         </div>
@@ -40,13 +40,13 @@ export default {
     return {
       Icon1: icon1,
       Icon2: icon2,
-      Icon3: icon3
+      Icon3: icon3,
     };
   },
   components: {
     TitleSection,
-    ItemService
-  }
+    ItemService,
+  },
 };
 </script>
 
