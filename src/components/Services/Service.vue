@@ -66,4 +66,18 @@ export default {
   grid-template-rows: auto;
   grid-gap: 16px;
 }
+@media (max-width: 600px) {
+  .services-lists {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 900px) {
+  .services-lists {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
 </style>

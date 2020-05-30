@@ -78,4 +78,26 @@ export default {
     max-width: 100%;
   }
 }
+@media (max-width: 600px) {
+  .content {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .content-description {
+    margin: 0px 16px;
+    > .title-content {
+    }
+  }
+}
+@media (max-width: 900px) {
+  .content {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .content-description {
+    margin: 0px 16px;
+    > .title-content {
+    }
+  }
+}
 </style>

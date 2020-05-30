@@ -40,16 +40,16 @@ import ItemTeam from "../Teams/ItemTeam.vue";
 export default {
   name: "Team",
   data() {
-      return {
-          Avatar1: avatar1,
-          Avatar2: avatar2,
-          Avatar3: avatar3,
-      }
+    return {
+      Avatar1: avatar1,
+      Avatar2: avatar2,
+      Avatar3: avatar3,
+    };
   },
   components: {
     TitleSection,
-    ItemTeam
-  }
+    ItemTeam,
+  },
 };
 </script>
 
@@ -63,8 +63,22 @@ export default {
   text-align: center;
 }
 .team-lists {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+@media (max-width: 900px) {
+  .team-lists {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr;
     grid-gap: 1rem;
+  }
+}
+@media (max-width: 600px) {
+  .team-lists {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
 }
 </style>

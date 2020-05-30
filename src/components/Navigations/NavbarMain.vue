@@ -10,11 +10,16 @@
           galeria="Galeria"
           equipe="Equipe"
           contato="Contato"
+          class="bp-menu"
         />
-        <BtnLink
-          link="https://freebiesui.com/figma-freebies/"
-          text="Peça um orçamento"
-        />
+        <div class="box-menu-toggle">
+          <BtnLink
+            link="https://freebiesui.com/figma-freebies/"
+            text="Peça um orçamento"
+            class="bp-Btn-link"
+          />
+          <Toggle class="bp-toggle" />
+        </div>
       </section>
     </div>
   </nav>
@@ -24,12 +29,14 @@
 import Brand from "../Global/Brand.vue";
 import MenuList from "../Global/MenuList.vue";
 import BtnLink from "../Global/BtnLink.vue";
+import Toggle from "../Global/Toggle.vue";
 export default {
   name: "NavbarMain",
   components: {
     Brand,
     MenuList,
     BtnLink,
+    Toggle,
   },
 };
 </script>
@@ -47,5 +54,31 @@ export default {
   justify-content: space-between;
   align-items: center;
   border-bottom: 0.001rem solid rgba($color: #201d1d, $alpha: 1);
+}
+.bp-toggle {
+  display: none;
+}
+.box-menu-toggle {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 600px) {
+  .bp-menu {
+    display: none;
+  }
+  .bp-toggle {
+    display: block;
+  }
+  .bp-Btn-link {
+    display: none;
+  }
+}
+@media (max-width: 900px) {
+  .bp-menu {
+    display: none;
+  }
+  .bp-toggle {
+    display: block;
+  }
 }
 </style>

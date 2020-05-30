@@ -256,4 +256,44 @@ export default {
   padding: 0;
   color: var(--white);
 }
+@media (max-width: 600px) {
+  .gallery-list {
+    width: 100%;
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .gallery-actions {
+    width: 100%;
+    display: flex;
+    ul {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  }
+}
+@media (max-width: 900px) {
+  .gallery-list {
+    width: 100%;
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .gallery-actions {
+    width: 100%;
+    display: flex;
+    ul {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  }
+}
 </style>
