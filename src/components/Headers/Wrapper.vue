@@ -1,5 +1,8 @@
 <template>
-  <header class="wrapper"><Hero /></header>
+  <header class="wrapper" id="inicio">
+    <div class="bg-transparent"></div>
+    <Hero />
+  </header>
 </template>
 
 <script>
@@ -16,8 +19,15 @@ export default {
 .wrapper {
   width: 100%;
   height: 600px;
-  display: flex;
-  align-items: center;
-  background-color: var(--dark);
+  background-image: url("../../assets/bg-hero.svg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.bg-transparent {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(23, 23, 23, 0.6);
 }
 </style>

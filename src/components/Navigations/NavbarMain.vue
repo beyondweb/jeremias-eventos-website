@@ -18,7 +18,7 @@
             text="Peça um orçamento"
             class="bp-Btn-link"
           />
-          <Toggle class="bp-toggle" />
+          <Toggle class="bp-toggle" @btn="toggleClick()" />
         </div>
       </section>
     </div>
@@ -32,6 +32,16 @@ import BtnLink from "../Global/BtnLink.vue";
 import Toggle from "../Global/Toggle.vue";
 export default {
   name: "NavbarMain",
+  computed: {
+    toggleData() {
+      return this.$store.state.toggle;
+    },
+  },
+  methods: {
+    toggleClick() {
+      this.$store.dispatch("toggleClick", !this.toggleData);
+    },
+  },
   components: {
     Brand,
     MenuList,

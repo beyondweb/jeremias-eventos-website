@@ -7,11 +7,14 @@
     <!-- Quando terminar de carregar vai setar todo o site -->
     <main v-else class="WrapperSite">
       <NavbarMain />
-      <!-- <Wrapper /> -->
+      <Wrapper />
       <About />
       <Services />
       <Gallery />
       <Team />
+      <transition name="fade">
+        <AsideMenu v-show="toggle" />
+      </transition>
     </main>
   </div>
 </template>
@@ -19,11 +22,12 @@
 <script>
 import IsLoading from "./components/Global/IsLoading.vue";
 import NavbarMain from "./components/Navigations/NavbarMain.vue";
-// import Wrapper from "./components/Headers/Wrapper.vue";
+import Wrapper from "./components/Headers/Wrapper.vue";
 import About from "./components/Abouts/About.vue";
 import Services from "./components/Services/Service.vue";
 import Gallery from "./components/Gallerys/Gallery.vue";
 import Team from "./components/Teams/Team.vue";
+import AsideMenu from "./components/Global/AsideMenu.vue";
 
 export default {
   name: "App",
@@ -32,20 +36,27 @@ export default {
       loading: true,
     };
   },
+  computed: {
+    toggle() {
+      return this.$store.state.toggle;
+    },
+  },
   components: {
     IsLoading,
     NavbarMain,
-    // Wrapper,
+    Wrapper,
     About,
     Services,
     Gallery,
     Team,
+    AsideMenu,
   },
   methods: {
     Loading() {
       window.addEventListener("load", () => {
         this.loading = !this.loading;
-        console.log(this.loading);
+        console.log(`Loading ${this.loading}`);
+        console.log(`Toggle ${this.toggle}`);
       });
     },
   },
@@ -100,5 +111,12 @@ body {
 img {
   max-width: 100%;
   display: block;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>

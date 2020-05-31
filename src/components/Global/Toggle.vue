@@ -1,5 +1,5 @@
 <template>
-  <div class="toggle-menu">
+  <div class="toggle-menu" @click="$emit('btn')">
     <div></div>
     <div></div>
     <div></div>
