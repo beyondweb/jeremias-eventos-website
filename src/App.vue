@@ -86,6 +86,9 @@ export default {
   --golded: #f0c442;
   --white: #ffffff;
 }
+* {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: var(--poppins);
