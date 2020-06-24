@@ -12,6 +12,7 @@
       <Services />
       <Gallery />
       <Team />
+      <Contact />
       <transition name="fade">
         <AsideMenu v-show="toggle" />
       </transition>
@@ -27,6 +28,7 @@ import About from "./components/Abouts/About.vue";
 import Services from "./components/Services/Service.vue";
 import Gallery from "./components/Gallerys/Gallery.vue";
 import Team from "./components/Teams/Team.vue";
+import Contact from "./components/Contacts/Contact.vue";
 import AsideMenu from "./components/Global/AsideMenu.vue";
 
 export default {
@@ -49,6 +51,7 @@ export default {
     Services,
     Gallery,
     Team,
+    Contact,
     AsideMenu,
   },
   methods: {

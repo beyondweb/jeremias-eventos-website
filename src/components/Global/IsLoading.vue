@@ -1,10 +1,9 @@
 <template>
-  <div class="loading">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
+  <div class="lds-ellipsis">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
   </div>
 </template>
 
@@ -15,57 +14,59 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.loading {
+.lds-ellipsis {
+  display: inline-block;
   position: relative;
-  display: flex;
+  width: 80px;
+  height: 80px;
 }
-.loading span {
-  display: block;
-  width: 20px;
-  height: 20px;
-  background-color: var(--gold);
-  border-radius: 30px;
-  margin: 0 7px;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--gold);
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
 }
-.loading span:not(:last-child) {
-  animation: animate 1s linear infinite;
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
 }
-@keyframes animate {
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
   0% {
-    transform: translateX(0);
+    transform: scale(0);
   }
   100% {
-    transform: translateX(30px);
+    transform: scale(1);
   }
 }
-.loading span:last-child {
-  animation: jump 1s ease-in-out infinite;
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
 }
-@keyframes jump {
+@keyframes lds-ellipsis2 {
   0% {
     transform: translate(0, 0);
   }
-  10% {
-    transform: translate(10px, -10px);
-  }
-  20% {
-    transform: translate(20px, 10px);
-  }
-  30% {
-    transform: translate(30px, -50px);
-  }
-  70% {
-    transform: translate(-150px, -50px);
-  }
-  80% {
-    transform: translate(-140px, 10px);
-  }
-  90% {
-    transform: translate(-130px, -10px);
-  }
   100% {
-    transform: translate(-120px, 0);
+    transform: translate(24px, 0);
   }
 }
 </style>
